@@ -12,6 +12,9 @@
   <body>
     <div class="container">
       <%= render 'layouts/nav' %>
+      <%flash.each do |key,value| %>
+        <%= content_tag :div, value,class:"alert alert-#{key}" %>
+      <%end %>
       <%= yield %>
     </div>
     <script src="https://use.fontawesome.com/a5f0a459e4.js"></script>
