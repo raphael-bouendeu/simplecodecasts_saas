@@ -54,4 +54,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
 gem 'stripe', '~>1.16.1'
-gem 'figaro', '~> 1.0.0'
+gem 'figaro', '~> 1.2.0'
