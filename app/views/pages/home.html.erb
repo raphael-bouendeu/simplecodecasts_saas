@@ -1,5 +1,21 @@
-<div class="jumbotron text-center">
-<h1>Bienvenue a Agro Expert</h1>
-<h3>Club des experts en agro </h3>
+<div class="container-fluid bg-light p-5  text-center">
+  <h1>Bienvenue a Agro Expert</h1>
+  <h3>Club des experts en agro , en elevage et autres </h3>
+</div>
+<br/>
+<br/>
+<div class="row mt-4">
+  <div class="col-sm-5 col-md-6 text-center">
+    <h2 class="text-center">Basic Membership</h2>
+    <h4>Sign for free and get basic access to the community</h4>
+    <br/>
+    <%= link_to 'Sign up free',new_user_registration_path,class:'btn btn-primary btn-lg d-grid' %>
+  </div>
+  <div class="col-sm-5 col-md-6 text-center">
+    <h2 class="text-center">Pro Membership</h2>
 
+    <h4>Sign up for the pro account</h4>
+        <br/>
+     <%= link_to 'Sign up pro',new_user_registration_path,class:'btn btn-success  btn-lg d-grid' %>
+  </div>
 </div>
