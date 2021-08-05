@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_04_114251) do
+ActiveRecord::Schema.define(version: 2021_08_05_113554) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,19 @@ ActiveRecord::Schema.define(version: 2021_08_04_114251) do
     t.decimal "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "stripe_id"
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "job_title"
+    t.string "phone_number"
+    t.string "contact_email"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -39,6 +52,7 @@ ActiveRecord::Schema.define(version: 2021_08_04_114251) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "plan_id"
+    t.string "stripe_card_token"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
