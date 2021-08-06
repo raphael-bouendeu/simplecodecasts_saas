@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   root 'pages#home'
   get '/about' =>'pages#about'
   resources :contacts
-resources :users do
-  resources :profile
+  resources :users do
+  resources :profiles
 end
 
 end

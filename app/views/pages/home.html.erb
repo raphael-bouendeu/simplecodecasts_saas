@@ -1,3 +1,5 @@
+ <%= link_to 'Create your profile', new_user_profile_path(current_user,hello:'world'),class:'btn btn-default btn-lg d-grid' if current_user%>
+
 <div class="container-fluid bg-light p-5  text-center">
   <h1>Bienvenue a Agro Expert</h1>
   <h3>Club des experts en agro , en elevage et autres </h3>
@@ -5,6 +7,7 @@
 <br/>
 <br/>
 <div class="row mt-4">
+
   <div class="col-sm-5 col-md-6 text-center">
     <h2 class="text-center">Basic Membership</h2>
     <h4>Sign for free and get basic access to the community</h4>
