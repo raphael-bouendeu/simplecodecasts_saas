@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/about' =>'pages#about'
   resources :contacts
   resources :users do
-  resources :profiles
+  resource :profile
 end
 
 end
