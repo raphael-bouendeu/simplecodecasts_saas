@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-md-b offset-md-2">
+    <ul class="list-unstyled">
+      <% @users.each do |user| %>
+        <% if user.profile  %>
+          <li>
+            <div class =" row  p-5  bg-light <%= cycle('white','') %>">
+              <div class="col-md-4">
+                <% if user.profile.image %>
+                  <%= link_to user   do%>
+                    <%= image_tag(url_for(user.profile.image.variant(resize: "225x260")))%>
+                  <% end %>
+                <%end%>
+              </div>
+              <div class="col-md-8">
+                <h2>
+                <%= link_to user   do%>
+                  <%=user.profile.first_name%> <%=user.profile.last_name%>
+                  <%end%>
+                </h2>
+                <p>
+                  <%=user.profile.job_title%>
+                </p>
+              </div>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>

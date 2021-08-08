@@ -1,8 +1,18 @@
-<br/>
-<%=@user.profile.first_name%> <%=@user.profile.last_name%> <br/>
-<%=@user.profile.job_title%> <br/>
-<% if current_user.plan_id=="prod_JyjsjOWeUecuvP" %>
-  <%=@user.profile.phone_number%> <br/>
-  <%=@user.profile.contact_email%> <br/>
-<% end %>
-<%=@user.profile.description%> <br/>
+<div class="row mt-4 p-3 ">
+  <div class="col-md-5  mt-5 text-center">
+    <%= image_tag  @user.profile.image ,class:"profile-show-image"%>
+  </div>
+  <div class="col-md-7 ">
+    <h1><%=@user.profile.first_name%> <%=@user.profile.last_name%></h1>
+    <h4><span class="job-title-icon"><%=job_title_icon %> </span>  <%=@user.profile.job_title%> </h4>
+    <div class=" p-5 profile-description">
+      <h5><%=@user.profile.description%></h5>
+    </div>
+    <% if true #current_user.plan_id=="prod_JyjsjOWeUecuvP" %>
+      <div class="contact-info mt-3 p-5">
+        <h4><%=@user.profile.phone_number%></h4>
+        <h4><%=@user.profile.contact_email%></h4>
+      </div>
+    <% end %>
+  </div>
+</div>
